@@ -5,13 +5,13 @@ go 1.18
 require (
 	github.com/google/go-cmp v0.5.8
 	github.com/google/uuid v1.3.0
-	github.com/kaspanet/kaspad v0.12.7
+	github.com/karlsen-network/karlsend v1.0.0
 	github.com/mattn/go-colorable v0.1.13
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.13.0
 	go.uber.org/atomic v1.7.0
 	go.uber.org/zap v1.23.0
-	golang.org/x/crypto v0.11.0
+	golang.org/x/crypto v0.1.0
 	gopkg.in/yaml.v2 v2.4.0
 )
 
