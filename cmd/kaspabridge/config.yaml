@@ -1,7 +1,7 @@
 # stratum_listen_port: the port that will be listening for incoming stratum 
 # traffic
 # Note `:PORT` format is needed if not specifiying a specific ip range 
-stratum_port: :5555
+stratum_port: :16112
 
 # kaspad_address: address/port of the rpc server for kaspad, typically 16110
 # For a list of public nodes, run `nslookup mainnet-dnsseed.daglabs-dev.com` 
@@ -21,14 +21,14 @@ kaspad_address: localhost:42110
 # If you don't want to change the default to match your device(s), the vardiff 
 # engine will adjust to an appropriate diff for lower hashrate devices within a 
 # few minutes.
-min_share_diff: 4096
+min_share_diff: 20
 
 # pow2_clamp: restrict difficulty to 2^n (e.g. 64, 128, 256, etc). This is 
 # required for IceRiver and BitMain ASICs, where difficulties further away from
 # powers of 2 cause higher error rates.  Using this feature will limit the 
 # functionality of vardiff, such that the shares_per_min becomes more of a 
 # minimum, rather than a target we can expect to converge on.
-pow2_clamp: false
+pow2_clamp: true
 
 # var_diff: if true, enables the auto-adjusting variable share diff mechanism. 
 # Starts with the value defined by the 'min_share_diff' setting, then checks 
@@ -68,7 +68,7 @@ block_wait_time: 3s
 # overall nonce-space (though with 1s block times, this shouldn't really
 # be a concern). 
 # 1 byte = 256 clients, 2 bytes = 65536, 3 bytes = 16777216.
-extranonce_size: 0
+extranonce_size: 2
 
 # print_stats: if true will print stats to the console, false just workers
 # joining/disconnecting, blocks found, and errors will be printed
